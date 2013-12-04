@@ -35,4 +35,11 @@ public final class Negociacao {
 		return preco * quantidade;
 	}
 
+	public boolean isMesmoDia(Calendar outraData) {
+		boolean dia = data.get(Calendar.DAY_OF_MONTH) == outraData.get(Calendar.DAY_OF_MONTH);
+		boolean mes = data.get(Calendar.MONTH) == outraData.get(Calendar.MONTH);
+		boolean ano = data.get(Calendar.YEAR) == outraData.get(Calendar.YEAR);
+		return dia && mes && ano;
+	}
+
 }
